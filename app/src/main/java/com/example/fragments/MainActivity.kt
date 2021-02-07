@@ -52,8 +52,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         fab.setOnClickListener {
             fabOnClickListener(it)
         }
-
-
     }
 
 
@@ -78,12 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun fabOnClickListener(view: View){
         val snackbar = Snackbar.make(view, "Our Snackbar", Snackbar.LENGTH_INDEFINITE)
-        // Устанавливаем цвет текста кнопки действий
-
-        // Получение snackbar view
-        val snackbarView = snackbar.view
         snackbar.show()
-        //Убрать Snackbar.Callback
 
         view.postDelayed({
             snackbar.dismiss()
@@ -244,7 +237,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         } else if (note.equals("description")) {
             openDescriptions(filmsItem, position)
         }
-
     }
 
 }
